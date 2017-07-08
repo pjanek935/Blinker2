@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blinker2.CSharp", "Blinker2.CSharp.csproj", "{9B3E7F67-0D40-0ED9-E01A-C84AF2180943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blinker2.CSharp.Editor", "Blinker2.CSharp.Editor.csproj", "{780D96AF-BD02-02DD-CBE5-0B8F77ED2B2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B3E7F67-0D40-0ED9-E01A-C84AF2180943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3E7F67-0D40-0ED9-E01A-C84AF2180943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3E7F67-0D40-0ED9-E01A-C84AF2180943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3E7F67-0D40-0ED9-E01A-C84AF2180943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{780D96AF-BD02-02DD-CBE5-0B8F77ED2B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{780D96AF-BD02-02DD-CBE5-0B8F77ED2B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{780D96AF-BD02-02DD-CBE5-0B8F77ED2B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{780D96AF-BD02-02DD-CBE5-0B8F77ED2B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
