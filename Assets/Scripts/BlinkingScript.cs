@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class BlinkingScript : MonoBehaviour {
 
@@ -206,20 +207,43 @@ public class BlinkingScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+
+        if (blinking && other.gameObject.tag == "NPC")
+        {
+            StopBlinking();
+            ShootUp();
+        }
+
         if (other.gameObject.tag == "BlinkDestination" && blinking)
         {
             StopBlinking();
         }
+
+        
     }
 
     void OnCollisionEnter(Collision other)
     {
+
+        if (blinking && other.gameObject.tag == "NPC")
+        {
+            StopBlinking();
+            ShootUp();
+        }
+
         if ((other.gameObject.tag == "Environment" || other.gameObject.tag == "Wall") && blinking)
         {
             StopBlinking();
         }
 
+        
+
     }
 
-
+    private void ShootUp()
+    {
+        rb.AddForce(Vector3.up * 500, ForceMode.Impulse);
+        Debug.Log("ShootUp");
+        startSlowMo();
+    }
 }
