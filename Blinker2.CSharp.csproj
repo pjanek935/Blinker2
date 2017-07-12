@@ -79,6 +79,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AILogicSript.cs" />
+    <Compile Include="Assets\ChangeNPCAlpha.cs" />
+    <Compile Include="Assets\NPCAI.cs" />
     <Compile Include="Assets\Scripts\AnimationManagerScript.cs" />
     <Compile Include="Assets\Scripts\BladeCollisionScript.cs" />
     <Compile Include="Assets\Scripts\BlinkLightScript.cs" />

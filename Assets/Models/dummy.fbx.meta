@@ -1,0 +1,1006 @@
+fileFormatVersion: 2
+guid: 3991d3567ce389845939edea1443466f
+timeCreated: 1499779410
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ball_l
+    100002: ball_l_end
+    100004: ball_r
+    100006: ball_r_end
+    100008: calf_l
+    100010: calf_l.001
+    100012: calf_l_end
+    100014: calf_r
+    100016: calf_r.001
+    100018: calf_r_end
+    100020: clavicle_l
+    100022: clavicle_r
+    100024: //RootNode
+    100026: Dummy3
+    100028: Dummy3:Male1591
+    100030: foot_l
+    100032: foot_r
+    100034: hand_l
+    100036: hand_r
+    100038: head
+    100040: head_end
+    100042: index_01_l
+    100044: index_01_r
+    100046: index_02_l
+    100048: index_02_r
+    100050: index_03_l
+    100052: index_03_l_end
+    100054: index_03_r
+    100056: index_03_r_end
+    100058: KneeL
+    100060: KneeL_end
+    100062: KneeR
+    100064: KneeR_end
+    100066: lowerarm_l
+    100068: lowerarm_l.001
+    100070: lowerarm_l_end
+    100072: lowerarm_r
+    100074: lowerarm_r.001
+    100076: lowerarm_r_end
+    100078: middle_01_l
+    100080: middle_01_r
+    100082: middle_02_l
+    100084: middle_02_r
+    100086: middle_03_l
+    100088: middle_03_l_end
+    100090: middle_03_r
+    100092: middle_03_r_end
+    100094: neck_01
+    100096: pelvis
+    100098: pinky_01_l
+    100100: pinky_01_r
+    100102: pinky_02_l
+    100104: pinky_02_r
+    100106: pinky_03_l
+    100108: pinky_03_l_end
+    100110: pinky_03_r
+    100112: pinky_03_r_end
+    100114: ring_01_l
+    100116: ring_01_r
+    100118: ring_02_l
+    100120: ring_02_r
+    100122: ring_03_l
+    100124: ring_03_l_end
+    100126: ring_03_r
+    100128: ring_03_r_end
+    100130: Root
+    100132: spine_01
+    100134: spine_02
+    100136: spine_03
+    100138: thigh_l
+    100140: thigh_r
+    100142: thumb_01_l
+    100144: thumb_01_r
+    100146: thumb_02_l
+    100148: thumb_02_r
+    100150: thumb_03_l
+    100152: thumb_03_l_end
+    100154: thumb_03_r
+    100156: thumb_03_r_end
+    100158: upperarm_l
+    100160: upperarm_r
+    400000: ball_l
+    400002: ball_l_end
+    400004: ball_r
+    400006: ball_r_end
+    400008: calf_l
+    400010: calf_l.001
+    400012: calf_l_end
+    400014: calf_r
+    400016: calf_r.001
+    400018: calf_r_end
+    400020: clavicle_l
+    400022: clavicle_r
+    400024: //RootNode
+    400026: Dummy3
+    400028: Dummy3:Male1591
+    400030: foot_l
+    400032: foot_r
+    400034: hand_l
+    400036: hand_r
+    400038: head
+    400040: head_end
+    400042: index_01_l
+    400044: index_01_r
+    400046: index_02_l
+    400048: index_02_r
+    400050: index_03_l
+    400052: index_03_l_end
+    400054: index_03_r
+    400056: index_03_r_end
+    400058: KneeL
+    400060: KneeL_end
+    400062: KneeR
+    400064: KneeR_end
+    400066: lowerarm_l
+    400068: lowerarm_l.001
+    400070: lowerarm_l_end
+    400072: lowerarm_r
+    400074: lowerarm_r.001
+    400076: lowerarm_r_end
+    400078: middle_01_l
+    400080: middle_01_r
+    400082: middle_02_l
+    400084: middle_02_r
+    400086: middle_03_l
+    400088: middle_03_l_end
+    400090: middle_03_r
+    400092: middle_03_r_end
+    400094: neck_01
+    400096: pelvis
+    400098: pinky_01_l
+    400100: pinky_01_r
+    400102: pinky_02_l
+    400104: pinky_02_r
+    400106: pinky_03_l
+    400108: pinky_03_l_end
+    400110: pinky_03_r
+    400112: pinky_03_r_end
+    400114: ring_01_l
+    400116: ring_01_r
+    400118: ring_02_l
+    400120: ring_02_r
+    400122: ring_03_l
+    400124: ring_03_l_end
+    400126: ring_03_r
+    400128: ring_03_r_end
+    400130: Root
+    400132: spine_01
+    400134: spine_02
+    400136: spine_03
+    400138: thigh_l
+    400140: thigh_r
+    400142: thumb_01_l
+    400144: thumb_01_r
+    400146: thumb_02_l
+    400148: thumb_02_r
+    400150: thumb_03_l
+    400152: thumb_03_l_end
+    400154: thumb_03_r
+    400156: thumb_03_r_end
+    400158: upperarm_l
+    400160: upperarm_r
+    4300000: Dummy3:Male1591
+    7400000: Dummy3|Running
+    7400002: Dummy3|Walking
+    7400004: Dummy3|Punch
+    7400006: Dummy3|Idle
+    9500000: //RootNode
+    13700000: Dummy3:Male1591
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Dummy3|Running
+      takeName: Dummy3|Running
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dummy3
+        weight: 1
+      - path: Dummy3/calf_l.001
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l/ball_l
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l/ball_l/ball_l_end
+        weight: 1
+      - path: Dummy3/calf_r.001
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r/ball_r
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r/ball_r/ball_r_end
+        weight: 1
+      - path: Dummy3/KneeL
+        weight: 1
+      - path: Dummy3/KneeL/KneeL_end
+        weight: 1
+      - path: Dummy3/KneeR
+        weight: 1
+      - path: Dummy3/KneeR/KneeR_end
+        weight: 1
+      - path: Dummy3/Root
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: Dummy3/Root/pelvis
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/lowerarm_l_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/lowerarm_r_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01/head
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01/head/head_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l/calf_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l/calf_l/calf_l_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r/calf_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r/calf_r/calf_r_end
+        weight: 1
+      - path: Dummy3:Male1591
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dummy3|Walking
+      takeName: Dummy3|Walking
+      firstFrame: 0
+      lastFrame: 33
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dummy3
+        weight: 1
+      - path: Dummy3/calf_l.001
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l/ball_l
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l/ball_l/ball_l_end
+        weight: 1
+      - path: Dummy3/calf_r.001
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r/ball_r
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r/ball_r/ball_r_end
+        weight: 1
+      - path: Dummy3/KneeL
+        weight: 1
+      - path: Dummy3/KneeL/KneeL_end
+        weight: 1
+      - path: Dummy3/KneeR
+        weight: 1
+      - path: Dummy3/KneeR/KneeR_end
+        weight: 1
+      - path: Dummy3/Root
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: Dummy3/Root/pelvis
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/lowerarm_l_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/lowerarm_r_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01/head
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01/head/head_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l/calf_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l/calf_l/calf_l_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r/calf_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r/calf_r/calf_r_end
+        weight: 1
+      - path: Dummy3:Male1591
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dummy3|Punch
+      takeName: Dummy3|Punch
+      firstFrame: 0
+      lastFrame: 8
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dummy3
+        weight: 1
+      - path: Dummy3/calf_l.001
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l/ball_l
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l/ball_l/ball_l_end
+        weight: 1
+      - path: Dummy3/calf_r.001
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r/ball_r
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r/ball_r/ball_r_end
+        weight: 1
+      - path: Dummy3/KneeL
+        weight: 1
+      - path: Dummy3/KneeL/KneeL_end
+        weight: 1
+      - path: Dummy3/KneeR
+        weight: 1
+      - path: Dummy3/KneeR/KneeR_end
+        weight: 1
+      - path: Dummy3/Root
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: Dummy3/Root/pelvis
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/lowerarm_l_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/lowerarm_r_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01/head
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01/head/head_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l/calf_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l/calf_l/calf_l_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r/calf_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r/calf_r/calf_r_end
+        weight: 1
+      - path: Dummy3:Male1591
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dummy3|Idle
+      takeName: Dummy3|Idle
+      firstFrame: 0
+      lastFrame: 66
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dummy3
+        weight: 1
+      - path: Dummy3/calf_l.001
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l/ball_l
+        weight: 1
+      - path: Dummy3/calf_l.001/foot_l/ball_l/ball_l_end
+        weight: 1
+      - path: Dummy3/calf_r.001
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r/ball_r
+        weight: 1
+      - path: Dummy3/calf_r.001/foot_r/ball_r/ball_r_end
+        weight: 1
+      - path: Dummy3/KneeL
+        weight: 1
+      - path: Dummy3/KneeL/KneeL_end
+        weight: 1
+      - path: Dummy3/KneeR
+        weight: 1
+      - path: Dummy3/KneeR/KneeR_end
+        weight: 1
+      - path: Dummy3/Root
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: Dummy3/Root/lowerarm_l.001/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: Dummy3/Root/lowerarm_r.001/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: Dummy3/Root/pelvis
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/lowerarm_l_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/lowerarm_r_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01/head
+        weight: 1
+      - path: Dummy3/Root/pelvis/spine_01/spine_02/spine_03/neck_01/head/head_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l/calf_l
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_l/calf_l/calf_l_end
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r/calf_r
+        weight: 1
+      - path: Dummy3/Root/pelvis/thigh_r/calf_r/calf_r_end
+        weight: 1
+      - path: Dummy3:Male1591
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
