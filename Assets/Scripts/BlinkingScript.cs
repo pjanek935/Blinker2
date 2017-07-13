@@ -8,29 +8,31 @@ public class BlinkingScript : MonoBehaviour {
     public float blinkSpeed = 100f;
     public float blinkLength = 20f;
     public float distToObstacleThreshold = 6f;
-    public float slowMoDuration = 1f;
-    public float slowMoWindow = 0.1f;
-    public ChromaticAberration chromaticAberration;
+    //public float slowMoDuration = 1f;
+    ////public float slowMoWindow = 0.1f;
+    //public ChromaticAberration chromaticAberration;
 
     private AnimationManagerScript animManager;
     private Rigidbody rb;
     private GameObject blinkDestination;
     private ShootingScript shootingScript;
     private ThrowingScript throwingScript;
+    private SlowMotion slowMotion;
+
     private float currentBlinkgSpeed;
     private bool blinking = false;
     private bool startBlink = false;
     private Vector3 blinkDirection;
-    private float timer = 0;
     private Vector3 playerVelocity = new Vector3(0, 0, 0);
     private bool attacking = false;
     private int currentAttack = 0;
     private float attackTimer = 0;
     private bool throwBlink = false;
-    private float bulletTimeTimer = 0f;
-    private bool canSlowMo = false;
-    private bool slowmo = false;
-    private float slowmoTimer = 0;
+
+    //private float bulletTimeTimer = 0f;
+    //private bool canSlowMo = false;
+    //private bool slowmo = false;
+    //private float slowmoTimer = 0;
 
     // Use this for initialization
     void Start () {
@@ -38,42 +40,40 @@ public class BlinkingScript : MonoBehaviour {
         animManager = GetComponent<AnimationManagerScript>();
         shootingScript = GetComponent<ShootingScript>();
         throwingScript = GetComponent<ThrowingScript>();
+        slowMotion = GetComponent<SlowMotion>();
+
         rb = GetComponent<Rigidbody>();
         blinkDestination = GameObject.Find("BlinkDestination");
     }
 	
 	// Update is called once per frame
 	void Update () {
+
         if (Input.GetButtonDown("Fire2") && !blinking)
-        {
             Blink();
-        }
 
         if (blinking)
         {
             transform.position = Vector3.MoveTowards(transform.position, blinkDestination.transform.position, currentBlinkgSpeed * Time.deltaTime);
-            //Debug.Log("blinking...");
             playerVelocity = playerVelocity - transform.position;
-            //Debug.Log("velocity: " + playerVelocity);
             if (playerVelocity == Vector3.zero)
             {
                 blinking = false;
-                //anim.SetTrigger("normal");
                 animManager.Normal();
             }
             playerVelocity = transform.position;
         }
 
-        if (canSlowMo)
-        {
-            bulletTimeTimer += Time.deltaTime;
-            //Debug.Log(bulletTimeTimer);
-            if (bulletTimeTimer >= slowMoWindow)
-            {
-                canSlowMo = false;
-                //Debug.Log("Cant slowmo now.");
-            }
-        }
+        //if (canSlowMo)
+        //{
+        //    bulletTimeTimer += Time.deltaTime;
+        //    //Debug.Log(bulletTimeTimer);
+        //    if (bulletTimeTimer >= slowMoWindow)
+        //    {
+        //        canSlowMo = false;
+        //        //Debug.Log("Cant slowmo now.");
+        //    }
+        //}
 
         Vector3 rayDirection = blinkDestination.transform.position - transform.position;
         float rayLength = Vector3.Distance(transform.position, blinkDestination.transform.position);
@@ -87,20 +87,20 @@ public class BlinkingScript : MonoBehaviour {
             currentAttack = 0;
         }
 
-        if (slowmo)
-        {
-            slowmoTimer += Time.deltaTime;
-            if (slowmoTimer >= slowMoDuration)
-            {
-                Time.timeScale = 1;
-                Time.fixedDeltaTime = 0.02F;
-                slowmo = false;
-                chromaticAberration.ChromaticAbberation = 1;
-            }
-        }
+        //if (slowmo)
+        //{
+        //    slowmoTimer += Time.deltaTime;
+        //    if (slowmoTimer >= slowMoDuration)
+        //    {
+        //        Time.timeScale = 1;
+        //        Time.fixedDeltaTime = 0.02F;
+        //        slowmo = false;
+        //        chromaticAberration.ChromaticAbberation = 1;
+        //    }
+        //}
     }
 
-    public bool isBlinking()
+    public bool IsBlinking()
     {
         return blinking;
     }
@@ -117,13 +117,15 @@ public class BlinkingScript : MonoBehaviour {
     void Blink()
     {
         currentBlinkgSpeed = blinkSpeed;
-        float hozMove = Input.GetAxisRaw("Horizontal");
+        float horMove = Input.GetAxisRaw("Horizontal");
         float verMove = Input.GetAxisRaw("Vertical");
-        if (hozMove == 0 && verMove == 0)
-        {
+
+        //No movement - no blink
+        if (horMove == 0 && verMove == 0)
             return;
-        }
-        if (verMove == 1 && !throwingScript.IsThrown() && shootingScript.getShootTimer() > shootingScript.fireRate)
+
+        //Attack animation
+        if (verMove >= 0.2 && !throwingScript.IsThrown())
         {
             if (currentAttack == 0)
             {
@@ -144,14 +146,19 @@ public class BlinkingScript : MonoBehaviour {
                 attackTimer = 0;
             }
         }
+
         blinking = true;
-        playerVelocity = transform.position;
-        blinkDirection = transform.rotation * (new Vector3(hozMove, 0, verMove).normalized);
+        rb.useGravity = false;
+        playerVelocity = transform.position; //??
+        blinkDirection = transform.rotation * (new Vector3(horMove, 0, verMove).normalized);
         blinkDestination.transform.position = transform.position + blinkDirection * blinkLength;
 
         playerPhantom.transform.position = transform.position;
-        bulletTimeTimer = 0;
-        canSlowMo = true;
+
+        slowMotion.EnableSlowMotion();
+        //canslowmo
+        //bulletTimeTimer = 0;
+        //canSlowMo = true;
 
         RaycastHit raycastHit;
         Vector3 rayDirection = blinkDestination.transform.position - transform.position;
@@ -159,7 +166,7 @@ public class BlinkingScript : MonoBehaviour {
         Ray ray = new Ray(transform.position, rayDirection);
         if (Physics.Raycast(ray, out raycastHit, rayLength))
         {
-            if (raycastHit.collider.tag == "Environment" || raycastHit.collider.tag == "Wall")
+            if (raycastHit.collider.tag == "Wall")
             {
                 blinkDestination.transform.position = raycastHit.point;
                 float distToObstacle = Vector3.Distance(transform.position, blinkDestination.transform.position);
@@ -171,12 +178,12 @@ public class BlinkingScript : MonoBehaviour {
         }
     }
 
-    public bool isSlowMo()
-    {
-        return slowmo;
-    }
+    //public bool IsSlowMo()
+    //{
+    //    return slowmo;
+    //}
 
-    private void StopBlinking()
+    public void StopBlinking()
     {
         blinking = false;
         rb.useGravity = true;
@@ -187,63 +194,52 @@ public class BlinkingScript : MonoBehaviour {
         }
     }
 
-    public bool CanSlowMo()
-    {
-        return canSlowMo;
-    }
+    //public bool CanSlowMo()
+    //{
+    //    return canSlowMo;
+    //}
 
-    public void startSlowMo()
-    {
-        if (slowmo)
-        {
-            return;
-        }
-        chromaticAberration.ChromaticAbberation = 5;
-        slowmo = true;
-        slowmoTimer = 0;
-        Time.timeScale = 0.4f;
-        Time.fixedDeltaTime = 0.02F * Time.timeScale;
-    }
+    //public void startSlowMo()
+    //{
+    //    if (slowmo)
+    //    {
+    //        return;
+    //    }
+    //    chromaticAberration.ChromaticAbberation = 5;
+    //    slowmo = true;
+    //    slowmoTimer = 0;
+    //    Time.timeScale = 0.4f;
+    //    Time.fixedDeltaTime = 0.02F * Time.timeScale;
+    //}
 
     void OnTriggerEnter(Collider other)
     {
 
-        if (blinking && other.gameObject.tag == "NPC")
-        {
-            StopBlinking();
-            ShootUp();
-        }
+        //if (blinking && other.gameObject.tag == "NPC")
+        //{
+        //    StopBlinking();
+        //    //ShootUp();
+        //}
 
         if (other.gameObject.tag == "BlinkDestination" && blinking)
-        {
             StopBlinking();
-        }
 
-        
     }
 
     void OnCollisionEnter(Collision other)
     {
+        //if (blinking && other.gameObject.tag == "NPC")
+        //    StopBlinking();
 
-        if (blinking && other.gameObject.tag == "NPC")
-        {
+        if ( (other.gameObject.tag == "Wall") && blinking)
             StopBlinking();
-            ShootUp();
-        }
-
-        if ((other.gameObject.tag == "Environment" || other.gameObject.tag == "Wall") && blinking)
-        {
-            StopBlinking();
-        }
-
-        
-
     }
 
     private void ShootUp()
     {
+        rb.velocity = Vector3.zero;
         rb.AddForce(Vector3.up * 500, ForceMode.Impulse);
-        Debug.Log("ShootUp");
-        startSlowMo();
+        GetComponent<FPSMovementScript>().Ground();
+        slowMotion.startSlowMotion();
     }
 }

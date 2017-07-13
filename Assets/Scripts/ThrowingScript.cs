@@ -10,7 +10,7 @@ public class ThrowingScript : MonoBehaviour {
     private AnimationManagerScript animManager;
     private BlinkingScript blinkingScript;
     private FPSMovementScript fpsMovementScript;
-    //private Rigidbody rb;
+
     private bool throwing = false;
 
     public bool IsThrown()
@@ -21,7 +21,6 @@ public class ThrowingScript : MonoBehaviour {
     public void PickUp()
     {
         katanaScript.PickUp();
-
         throwing = false;
         katanaMesh.enabled = true;
         animManager.Normal();
@@ -60,9 +59,7 @@ public class ThrowingScript : MonoBehaviour {
             float d = Vector3.Distance(katanaTransform.position, transform.position);
             if (d < 10)
             {
-                //Debug.Log("Distance: " + d);
                 PickUp();
-                
             }
             else
             {
@@ -75,13 +72,7 @@ public class ThrowingScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        
         if (other.gameObject.tag == "Katana" && IsThrown())
-        {
             PickUp();
-            //fpsMovementScript.ResetJumpCounter();
-            //Debug.Log("!!!");
-        }
-
     }
 }

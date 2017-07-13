@@ -4,7 +4,7 @@ using System.Collections;
 public class ShootBulletScript : MonoBehaviour {
 
     public float speed = 10;
-    private BlinkingScript blinkingScript;
+    private SlowMotion slowMotion;
     private CounteringScript counteringScript;
     private Transform camera;
 
@@ -19,7 +19,7 @@ public class ShootBulletScript : MonoBehaviour {
         
         rb.AddForce(Quaternion.AngleAxis(90, transform.right) * transform.forward * speed);
 
-        blinkingScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BlinkingScript>();
+        slowMotion = GameObject.FindGameObjectWithTag("Player").GetComponent<SlowMotion>();
         counteringScript = GameObject.FindGameObjectWithTag("Player").GetComponent<CounteringScript>();
         camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().transform;
 
@@ -37,9 +37,9 @@ public class ShootBulletScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "PlayerPhantom" && /*blinkingScript.isBlinking() &&*/ blinkingScript.CanSlowMo() && this.tag != "Bullet")
+        if (other.tag == "PlayerPhantom" && /*blinkingScript.isBlinking() &&*/ slowMotion.CanSlowMotion() && this.tag != "Bullet")
         {
-            blinkingScript.startSlowMo();
+            slowMotion.startSlowMotion();
         }
         if (other.tag == "PlayerFace" && counteringScript.CanCounter() && canBeDestroyed)
         {

@@ -16,6 +16,6 @@ public class CanCounterScript : MonoBehaviour {
 
     public void CanCounter()
     {
-        counteringScript.CanCounter(true);
+        counteringScript.SetCanCounter(true);
     }
 }

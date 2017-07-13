@@ -9,7 +9,7 @@ public class ThrowThisScript : MonoBehaviour {
     public float torqueUp = 0f;
     public float speed = 10f;
     public BladeCollisionScript bladeCollider;
-    public BlinkingScript blinkingScript;
+    public SlowMotion slowMotion;
     public ThrowingScript throwingScript;
     public FPSMovementScript fpsMovement;
 
@@ -43,7 +43,7 @@ public class ThrowThisScript : MonoBehaviour {
             boxColider.enabled = true;
             transform.position = baseObject.position + baseObject.forward * 5 + baseObject.right * 2;
             transform.rotation = baseObject.rotation;
-            rb.AddForce(baseObject.forward * speed * (blinkingScript.isSlowMo() ? 2 : 1));
+            rb.AddForce(baseObject.forward * speed * (slowMotion.IsSlowMotion() ? 2 : 1));
             rb.AddTorque(transform.forward * torqueForward);
             rb.AddTorque(transform.right * torqueRight);
             rb.AddTorque(transform.up * torqueUp);

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class CounteringScript : MonoBehaviour {
 
@@ -23,23 +24,30 @@ public class CounteringScript : MonoBehaviour {
         {
             counterTimer += Time.deltaTime;
             if (counterTimer >= counterTime)
-            {
-                countering = false;
-                counterTimer = 0;
-                animManager.StopCounter();
-                CanCounter(false);
-            }
+                StopCountering();
         }
 
         if (Input.GetKeyDown(KeyCode.E) && !countering && !throwingScript.IsThrown())
-        {
-            animManager.Counter();
-            countering = true;
-            counterTimer = 0;
-        }
+            StartCountering();
+        
     }
 
-    public void CanCounter(bool canCounter)
+    private void StartCountering()
+    {
+        animManager.Counter();
+        countering = true;
+        counterTimer = 0;
+    }
+
+    private void StopCountering()
+    {
+        countering = false;
+        counterTimer = 0;
+        animManager.StopCounter();
+        SetCanCounter(false);
+    }
+
+    public void SetCanCounter(bool canCounter)
     {
         this.canCounter = canCounter;
     }
@@ -49,7 +57,7 @@ public class CounteringScript : MonoBehaviour {
         return canCounter;
     }
 
-    public bool isCountering()
+    public bool IsCountering()
     {
         return countering;
     }

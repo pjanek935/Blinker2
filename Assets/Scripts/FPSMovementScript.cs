@@ -9,7 +9,7 @@ public class FPSMovementScript : MonoBehaviour {
     private AnimationManagerScript animManager;
     private Rigidbody rb;
     private ShootingScript shootingScript;
-    private BlinkingScript blinkigScript;
+    private SlowMotion slowMotion;
     private ThrowingScript throwingScript;
 
     private bool grounded = true;
@@ -24,7 +24,7 @@ public class FPSMovementScript : MonoBehaviour {
     void Start () {
         animManager = GetComponent<AnimationManagerScript>();
         shootingScript = GetComponent<ShootingScript>();
-        blinkigScript = GetComponent<BlinkingScript>();
+        slowMotion = GetComponent<SlowMotion>();
         throwingScript = GetComponent<ThrowingScript>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
@@ -33,17 +33,12 @@ public class FPSMovementScript : MonoBehaviour {
     void Update()
     {
         if (Input.GetButtonDown("Jump") && canJump)
-        {
             hasJumped = true;
-        }
+
         if (jumpCounter >= maxJumps)
-        {
             canJump = false;
-        }
         else
-        {
             canJump = true;
-        }
     }
 	
 	void FixedUpdate () {
@@ -61,24 +56,21 @@ public class FPSMovementScript : MonoBehaviour {
             grounded = false;
             jumpCounter++;
             rb.velocity = Vector3.zero;
-            rb.AddForce(Vector3.zero);
-            rb.AddForce(transform.up * jumpPower * (blinkigScript.isSlowMo() ? 2 : 1));
+            rb.AddForce(transform.up * jumpPower * (slowMotion.IsSlowMotion() ? 2 : 1));
         }
     }
 
     void OnCollisionEnter(Collision other)
     {
-        if ((other.gameObject.tag == "Environment" || other.gameObject.tag == "Wall") && !grounded)
-        {
-            grounded = true;
-            jumpCounter = 0;
-        }
+        if ((other.gameObject.tag == "Environment" || other.gameObject.tag == "Wall" ||
+            other.gameObject.tag == "NPC") && !grounded)
+            Ground();
     }
 
-    public void ResetJumpCounter()
+    public void Ground()
     {
+        grounded = true;
         jumpCounter = 0;
-        Debug.Log("Reseting jump counter");
     }
     
     public float getVerMove()

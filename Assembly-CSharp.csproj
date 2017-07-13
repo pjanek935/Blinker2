@@ -46,22 +46,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AILogicSript.cs" />
-     <Compile Include="Assets\ChangeNPCAlpha.cs" />
-     <Compile Include="Assets\NPCAI.cs" />
+     <Compile Include="Assets\Scripts\AILogicSript.cs" />
      <Compile Include="Assets\Scripts\AnimationManagerScript.cs" />
      <Compile Include="Assets\Scripts\BladeCollisionScript.cs" />
      <Compile Include="Assets\Scripts\BlinkLightScript.cs" />
      <Compile Include="Assets\Scripts\BlinkingScript.cs" />
      <Compile Include="Assets\Scripts\CameraControlScript.cs" />
      <Compile Include="Assets\Scripts\CanCounterScript.cs" />
+     <Compile Include="Assets\Scripts\ChangeNPCAlpha.cs" />
      <Compile Include="Assets\Scripts\CounteringScript.cs" />
      <Compile Include="Assets\Scripts\FPSMovementScript.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\MovementScript.cs" />
+     <Compile Include="Assets\Scripts\NPCAI.cs" />
      <Compile Include="Assets\Scripts\PlayerControllerScript.cs" />
      <Compile Include="Assets\Scripts\RotatorScript.cs" />
      <Compile Include="Assets\Scripts\ShootBulletScript.cs" />
+     <Compile Include="Assets\Scripts\ShootUp.cs" />
      <Compile Include="Assets\Scripts\ShootingScript.cs" />
      <Compile Include="Assets\Scripts\SummyShootingScript.cs" />
      <Compile Include="Assets\Scripts\ThrowScript.cs" />
@@ -72,6 +73,7 @@
      <Compile Include="Assets\Shaders\Billboard\billboard.cs" />
      <Compile Include="Assets\Shaders\ChromaticAberration.cs" />
      <Compile Include="Assets\Shaders\imageEffects\cPrecision.cs" />
+     <Compile Include="Assets\SlowMotion.cs" />
      <None Include="Assets\Shaders\psx-unlit.shader" />
      <None Include="Assets\Shaders\psx-unlit_noambient.shader" />
      <None Include="Assets\Shaders\Reflective\psx-unlit-mult.shader" />
