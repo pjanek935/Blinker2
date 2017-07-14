@@ -29,6 +29,8 @@ public class BlinkingScript : MonoBehaviour {
     private float attackTimer = 0;
     private bool throwBlink = false;
 
+    public Animator anim;
+
     //private float bulletTimeTimer = 0f;
     //private bool canSlowMo = false;
     //private bool slowmo = false;
@@ -59,21 +61,12 @@ public class BlinkingScript : MonoBehaviour {
             if (playerVelocity == Vector3.zero)
             {
                 blinking = false;
-                animManager.Normal();
+                //animManager.Normal();
             }
             playerVelocity = transform.position;
         }
 
-        //if (canSlowMo)
-        //{
-        //    bulletTimeTimer += Time.deltaTime;
-        //    //Debug.Log(bulletTimeTimer);
-        //    if (bulletTimeTimer >= slowMoWindow)
-        //    {
-        //        canSlowMo = false;
-        //        //Debug.Log("Cant slowmo now.");
-        //    }
-        //}
+        
 
         Vector3 rayDirection = blinkDestination.transform.position - transform.position;
         float rayLength = Vector3.Distance(transform.position, blinkDestination.transform.position);
@@ -87,17 +80,6 @@ public class BlinkingScript : MonoBehaviour {
             currentAttack = 0;
         }
 
-        //if (slowmo)
-        //{
-        //    slowmoTimer += Time.deltaTime;
-        //    if (slowmoTimer >= slowMoDuration)
-        //    {
-        //        Time.timeScale = 1;
-        //        Time.fixedDeltaTime = 0.02F;
-        //        slowmo = false;
-        //        chromaticAberration.ChromaticAbberation = 1;
-        //    }
-        //}
     }
 
     public bool IsBlinking()
@@ -127,24 +109,25 @@ public class BlinkingScript : MonoBehaviour {
         //Attack animation
         if (verMove >= 0.2 && !throwingScript.IsThrown())
         {
-            if (currentAttack == 0)
-            {
-                animManager.Attack(0);
-                currentAttack++;
-                attackTimer = 0;
-            }
-            else if (currentAttack == 1)
-            {
-                animManager.Attack(1);
-                currentAttack++;
-                attackTimer = 0;
-            }
-            else if (currentAttack == 2)
-            {
-                animManager.Attack(2);
-                currentAttack = 0;
-                attackTimer = 0;
-            }
+            anim.SetTrigger("attack");
+            //if (currentAttack == 0)
+            //{
+            //    animManager.Attack(0);
+            //    currentAttack++;
+            //    attackTimer = 0;
+            //}
+            //else if (currentAttack == 1)
+            //{
+            //    animManager.Attack(1);
+            //    currentAttack++;
+            //    attackTimer = 0;
+            //}
+            //else if (currentAttack == 2)
+            //{
+            //    animManager.Attack(2);
+            //    currentAttack = 0;
+            //    attackTimer = 0;
+            //}
         }
 
         blinking = true;
@@ -156,9 +139,6 @@ public class BlinkingScript : MonoBehaviour {
         playerPhantom.transform.position = transform.position;
 
         slowMotion.EnableSlowMotion();
-        //canslowmo
-        //bulletTimeTimer = 0;
-        //canSlowMo = true;
 
         RaycastHit raycastHit;
         Vector3 rayDirection = blinkDestination.transform.position - transform.position;

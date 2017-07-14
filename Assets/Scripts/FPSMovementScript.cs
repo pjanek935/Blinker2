@@ -20,8 +20,10 @@ public class FPSMovementScript : MonoBehaviour {
     private float horMove;
     private float verMove;
 
+    public Animator anim;
+
     // Use this for initialization
-    void Start () {
+    void Start() {
         animManager = GetComponent<AnimationManagerScript>();
         shootingScript = GetComponent<ShootingScript>();
         slowMotion = GetComponent<SlowMotion>();
@@ -29,7 +31,7 @@ public class FPSMovementScript : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
-	
+
     void Update()
     {
         if (Input.GetButtonDown("Jump") && canJump)
@@ -40,18 +42,24 @@ public class FPSMovementScript : MonoBehaviour {
         else
             canJump = true;
     }
-	
-	void FixedUpdate () {
+
+    void FixedUpdate() {
         horMove = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
         verMove = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         transform.Translate(horMove, 0, verMove);
-        if (!throwingScript.isThrowing() && shootingScript.getShootTimer() > shootingScript.fireRate)
-        {
-            animManager.move(verMove, horMove, grounded);
-        }
+        //if (!throwingScript.isThrowing() && shootingScript.getShootTimer() > shootingScript.fireRate)
+        //{
+        //    animManager.move(verMove, horMove, grounded);
+        //}
+        float speed = new Vector2(horMove, verMove).magnitude;
+        if(grounded)
+            anim.SetFloat("speed", speed);
+        else
+            anim.SetFloat("speed", 0);
 
         if (hasJumped)
         {
+            anim.SetTrigger("jump");
             hasJumped = false;
             grounded = false;
             jumpCounter++;
