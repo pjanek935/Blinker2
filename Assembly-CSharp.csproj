@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FollowScript.cs" />
      <Compile Include="Assets\Scripts\AILogicSript.cs" />
      <Compile Include="Assets\Scripts\AnimationManagerScript.cs" />
      <Compile Include="Assets\Scripts\BladeCollisionScript.cs" />
