@@ -6,8 +6,9 @@ public class CounteringScript : MonoBehaviour {
 
     public float counterTime = 0.5f;
 
+    public Animator anim;
     private AnimationManagerScript animManager;
-    public ThrowingScript throwingScript;
+    private ThrowingScript throwingScript;
     private float counterTimer = 0;
     private bool countering = false;
     private bool canCounter = false;
@@ -27,7 +28,10 @@ public class CounteringScript : MonoBehaviour {
                 StopCountering();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && !countering && !throwingScript.IsThrown())
+
+        
+        if (Input.GetKeyDown(KeyCode.E) && !countering && !throwingScript.IsThrown() &&
+            animManager.GetState() != AnimationManagerScript.State.THROW)
             StartCountering();
         
     }

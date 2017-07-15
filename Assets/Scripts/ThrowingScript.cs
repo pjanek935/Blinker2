@@ -33,8 +33,6 @@ public class ThrowingScript : MonoBehaviour {
         throwing = false;
     }
 
-    
-
     public bool isThrowing()
     {
         return throwing;
@@ -49,7 +47,9 @@ public class ThrowingScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !katanaScript.getIsThrown())
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !katanaScript.getIsThrown() && 
+            animManager.GetState() != AnimationManagerScript.State.ATTACK &&
+            animManager.GetState() != AnimationManagerScript.State.COUNTER)
         {
             throwing = true;
             animManager.Throw();

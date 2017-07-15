@@ -31,11 +31,6 @@ public class BlinkingScript : MonoBehaviour {
 
     public Animator anim;
 
-    //private float bulletTimeTimer = 0f;
-    //private bool canSlowMo = false;
-    //private bool slowmo = false;
-    //private float slowmoTimer = 0;
-
     // Use this for initialization
     void Start () {
         currentBlinkgSpeed = blinkSpeed;
@@ -110,24 +105,6 @@ public class BlinkingScript : MonoBehaviour {
         if (verMove >= 0.2 && !throwingScript.IsThrown())
         {
             anim.SetTrigger("attack");
-            //if (currentAttack == 0)
-            //{
-            //    animManager.Attack(0);
-            //    currentAttack++;
-            //    attackTimer = 0;
-            //}
-            //else if (currentAttack == 1)
-            //{
-            //    animManager.Attack(1);
-            //    currentAttack++;
-            //    attackTimer = 0;
-            //}
-            //else if (currentAttack == 2)
-            //{
-            //    animManager.Attack(2);
-            //    currentAttack = 0;
-            //    attackTimer = 0;
-            //}
         }
 
         blinking = true;
@@ -158,10 +135,6 @@ public class BlinkingScript : MonoBehaviour {
         }
     }
 
-    //public bool IsSlowMo()
-    //{
-    //    return slowmo;
-    //}
 
     public void StopBlinking()
     {
@@ -174,32 +147,12 @@ public class BlinkingScript : MonoBehaviour {
         }
     }
 
-    //public bool CanSlowMo()
-    //{
-    //    return canSlowMo;
-    //}
-
-    //public void startSlowMo()
-    //{
-    //    if (slowmo)
-    //    {
-    //        return;
-    //    }
-    //    chromaticAberration.ChromaticAbberation = 5;
-    //    slowmo = true;
-    //    slowmoTimer = 0;
-    //    Time.timeScale = 0.4f;
-    //    Time.fixedDeltaTime = 0.02F * Time.timeScale;
-    //}
+    
 
     void OnTriggerEnter(Collider other)
     {
 
-        //if (blinking && other.gameObject.tag == "NPC")
-        //{
-        //    StopBlinking();
-        //    //ShootUp();
-        //}
+        
 
         if (other.gameObject.tag == "BlinkDestination" && blinking)
             StopBlinking();
@@ -208,8 +161,7 @@ public class BlinkingScript : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        //if (blinking && other.gameObject.tag == "NPC")
-        //    StopBlinking();
+        
 
         if ( (other.gameObject.tag == "Wall") && blinking)
             StopBlinking();
