@@ -8,9 +8,6 @@ public class BlinkingScript : MonoBehaviour {
     public float blinkSpeed = 100f;
     public float blinkLength = 20f;
     public float distToObstacleThreshold = 6f;
-    //public float slowMoDuration = 1f;
-    ////public float slowMoWindow = 0.1f;
-    //public ChromaticAberration chromaticAberration;
 
     private AnimationManagerScript animManager;
     private Rigidbody rb;
@@ -28,8 +25,6 @@ public class BlinkingScript : MonoBehaviour {
     private int currentAttack = 0;
     private float attackTimer = 0;
     private bool throwBlink = false;
-
-    public Animator anim;
 
     // Use this for initialization
     void Start () {
@@ -61,8 +56,6 @@ public class BlinkingScript : MonoBehaviour {
             playerVelocity = transform.position;
         }
 
-        
-
         Vector3 rayDirection = blinkDestination.transform.position - transform.position;
         float rayLength = Vector3.Distance(transform.position, blinkDestination.transform.position);
         Debug.DrawRay(transform.position, rayDirection * rayLength);
@@ -71,8 +64,9 @@ public class BlinkingScript : MonoBehaviour {
         if (attackTimer >= 1f)
         {
             attackTimer = 0;
-            //attacking = false;
-            currentAttack = 0;
+            currentAttack++;
+            if (currentAttack >= 3)
+                currentAttack = 0;
         }
 
     }
@@ -102,10 +96,8 @@ public class BlinkingScript : MonoBehaviour {
             return;
 
         //Attack animation
-        if (verMove >= 0.2 && !throwingScript.IsThrown())
-        {
-            anim.SetTrigger("attack");
-        }
+        if (verMove >= 0.2 && !throwingScript.IsThrown() && animManager.GetState() != AnimationManagerScript.State.COUNTER)
+            animManager.Attack();
 
         blinking = true;
         rb.useGravity = false;
@@ -147,22 +139,14 @@ public class BlinkingScript : MonoBehaviour {
         }
     }
 
-    
-
     void OnTriggerEnter(Collider other)
     {
-
-        
-
         if (other.gameObject.tag == "BlinkDestination" && blinking)
             StopBlinking();
-
     }
 
     void OnCollisionEnter(Collision other)
     {
-        
-
         if ( (other.gameObject.tag == "Wall") && blinking)
             StopBlinking();
     }

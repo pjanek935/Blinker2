@@ -20,8 +20,6 @@ public class FPSMovementScript : MonoBehaviour {
     private float horMove;
     private float verMove;
 
-    public Animator anim;
-
     // Use this for initialization
     void Start() {
         animManager = GetComponent<AnimationManagerScript>();
@@ -47,19 +45,14 @@ public class FPSMovementScript : MonoBehaviour {
         horMove = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
         verMove = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         transform.Translate(horMove, 0, verMove);
-        //if (!throwingScript.isThrowing() && shootingScript.getShootTimer() > shootingScript.fireRate)
-        //{
-        //    animManager.move(verMove, horMove, grounded);
-        //}
         float speed = new Vector2(horMove, verMove).magnitude;
-        if(grounded)
-            anim.SetFloat("speed", speed);
+        if (grounded)
+            animManager.Move(speed);
         else
-            anim.SetFloat("speed", 0);
+            animManager.Move(0);
 
         if (hasJumped)
         {
-            anim.SetTrigger("jump");
             hasJumped = false;
             grounded = false;
             jumpCounter++;

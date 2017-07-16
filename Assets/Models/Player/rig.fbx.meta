@@ -2537,7 +2537,7 @@ ModelImporter:
       name: Rig|attack01
       takeName: Rig|attack01
       firstFrame: 0
-      lastFrame: 16
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
