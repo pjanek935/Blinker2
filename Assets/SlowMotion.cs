@@ -23,11 +23,10 @@ public class SlowMotion : MonoBehaviour {
         if (canSlowMo)
         {
             bulletTimeTimer += Time.deltaTime;
-            //Debug.Log(bulletTimeTimer);
             if (bulletTimeTimer >= slowMoWindow)
             {
+                bulletTimeTimer = 0;
                 canSlowMo = false;
-                //Debug.Log("Cant slowmo now.");
             }
         }
 
@@ -56,13 +55,13 @@ public class SlowMotion : MonoBehaviour {
 
     public void EnableSlowMotion()
     {
-
+        canSlowMo = true;
     }
 
-    public void DisableSlowMotion()
-    {
+    //public void DisableSlowMotion()
+    //{
 
-    }
+    //}
 
     public void startSlowMotion()
     {

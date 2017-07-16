@@ -53,6 +53,7 @@
      <None Include="Assets\Shaders\Trasparent\psx-trasparent-unlit-noambient.shader" />
      <None Include="Assets\Shaders\Trasparent\psx-trasparent-unlit.shader" />
      <None Include="Assets\Shaders\Resources\cPrecision.shader" />
+     <None Include="Assets\3DTextOneSided.shader.shader" />
      <None Include="Assets\Shaders\Reflective\psx-unlit-add.shader" />
      <None Include="Assets\Shaders\Reflective\psx-vertexlit-mult.shader" />
      <None Include="Assets\Shaders\Reflective\psx-unlit_noambient-mult.shader" />

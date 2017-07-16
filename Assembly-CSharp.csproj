@@ -48,7 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\BlinkImage.cs" />
      <Compile Include="Assets\BlinkRed.cs" />
+     <Compile Include="Assets\DodgeSlowMotion.cs" />
      <Compile Include="Assets\FollowScript.cs" />
+     <Compile Include="Assets\ReflectBullets.cs" />
      <Compile Include="Assets\Scripts\AILogicSript.cs" />
      <Compile Include="Assets\Scripts\AnimationManagerScript.cs" />
      <Compile Include="Assets\Scripts\BladeCollisionScript.cs" />
@@ -77,12 +79,16 @@
      <Compile Include="Assets\Shaders\ChromaticAberration.cs" />
      <Compile Include="Assets\Shaders\imageEffects\cPrecision.cs" />
      <Compile Include="Assets\SlowMotion.cs" />
+     <Compile Include="Assets\TargetScript.cs" />
+     <Compile Include="Assets\TriggerScript.cs" />
+     <Compile Include="Assets\WallOpenScript.cs" />
      <None Include="Assets\Shaders\psx-unlit.shader" />
      <None Include="Assets\Shaders\psx-unlit_noambient.shader" />
      <None Include="Assets\Shaders\Reflective\psx-unlit-mult.shader" />
      <None Include="Assets\Shaders\Trasparent\psx-trasparent-unlit-noambient.shader" />
      <None Include="Assets\Shaders\Trasparent\psx-trasparent-unlit.shader" />
      <None Include="Assets\Shaders\Resources\cPrecision.shader" />
+     <None Include="Assets\3DTextOneSided.shader.shader" />
      <None Include="Assets\Shaders\Reflective\psx-unlit-add.shader" />
      <None Include="Assets\Shaders\Reflective\psx-vertexlit-mult.shader" />
      <None Include="Assets\Shaders\Reflective\psx-unlit_noambient-mult.shader" />

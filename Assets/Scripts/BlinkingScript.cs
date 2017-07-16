@@ -73,7 +73,7 @@ public class BlinkingScript : MonoBehaviour {
 
         if (blinkSlider.fillAmount < 1)
         {
-            blinkSlider.fillAmount += 0.002f;
+            blinkSlider.fillAmount += 0.01f;
         }
 
     }
