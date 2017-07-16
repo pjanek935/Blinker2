@@ -2715,7 +2715,7 @@ ModelImporter:
       name: Rig|attack02
       takeName: Rig|attack02
       firstFrame: 0
-      lastFrame: 16
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -2893,7 +2893,7 @@ ModelImporter:
       name: Rig|attack03
       takeName: Rig|attack03
       firstFrame: 0
-      lastFrame: 16
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

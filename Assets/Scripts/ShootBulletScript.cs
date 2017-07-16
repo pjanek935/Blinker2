@@ -16,8 +16,7 @@ public class ShootBulletScript : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody>();
 
-        
-        rb.AddForce(Quaternion.AngleAxis(90, transform.right) * transform.forward * speed);
+        rb.AddForce(transform.forward * speed);
 
         slowMotion = GameObject.FindGameObjectWithTag("Player").GetComponent<SlowMotion>();
         counteringScript = GameObject.FindGameObjectWithTag("Player").GetComponent<CounteringScript>();

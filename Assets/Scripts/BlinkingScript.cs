@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 public class BlinkingScript : MonoBehaviour {
 
+    public Image blinkSlider;
     public GameObject playerPhantom;
     public float blinkSpeed = 100f;
     public float blinkLength = 20f;
@@ -69,6 +71,11 @@ public class BlinkingScript : MonoBehaviour {
                 currentAttack = 0;
         }
 
+        if (blinkSlider.fillAmount < 1)
+        {
+            blinkSlider.fillAmount += 0.002f;
+        }
+
     }
 
     public bool IsBlinking()
@@ -94,6 +101,15 @@ public class BlinkingScript : MonoBehaviour {
         //No movement - no blink
         if (horMove == 0 && verMove == 0)
             return;
+
+        if (blinkSlider.fillAmount < 0.33f)
+        {
+            blinkSlider.GetComponentInParent<BlinkImage>().BlinkRed();
+            return;
+        }
+            
+
+        blinkSlider.fillAmount -= 0.33f;
 
         //Attack animation
         if (verMove >= 0.2 && !throwingScript.IsThrown() && animManager.GetState() != AnimationManagerScript.State.COUNTER)

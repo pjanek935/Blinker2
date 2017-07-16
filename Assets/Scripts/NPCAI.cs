@@ -31,9 +31,8 @@ public class NPCAI : MonoBehaviour {
         animator = GetComponent<Animator>();
 
         currentPOI = random.Next(0, poi.Count);
-        agent.speed = 7;
-        animator.SetBool("Walk", true);
-        animator.SetBool("Run", false);
+        agent.speed = 5;
+        animator.SetTrigger("walk");
     }
 
     // Update is called once per frame
@@ -46,8 +45,17 @@ public class NPCAI : MonoBehaviour {
             {
                 timer = 0;
                 idle = false;
-                animator.SetBool("Idle", false);
-                animator.SetBool("Walk", true);
+                if (random.NextDouble() > 0.5)
+                {
+                    animator.SetTrigger("walk");
+                    agent.speed = 5;
+                }
+                else
+                {
+                    animator.SetTrigger("run");
+                    agent.speed = 10;
+                }
+                
                 return;
             }
         }
@@ -64,8 +72,8 @@ public class NPCAI : MonoBehaviour {
                 }
                 idle = true;
                 idleLimiter = (float)(random.NextDouble() * 5 + 3);
-                animator.SetTrigger("Idle");
-                animator.SetBool("Walk", false);
+                int rand = random.Next(1, 5);
+                animator.SetTrigger("idle" + rand);
             }
         }
 
