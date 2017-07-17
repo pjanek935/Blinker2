@@ -50,7 +50,9 @@
      <Compile Include="Assets\BlinkRed.cs" />
      <Compile Include="Assets\DodgeSlowMotion.cs" />
      <Compile Include="Assets\FollowScript.cs" />
+     <Compile Include="Assets\HealthScript.cs" />
      <Compile Include="Assets\ReflectBullets.cs" />
+     <Compile Include="Assets\Respawn.cs" />
      <Compile Include="Assets\Scripts\AILogicSript.cs" />
      <Compile Include="Assets\Scripts\AnimationManagerScript.cs" />
      <Compile Include="Assets\Scripts\BladeCollisionScript.cs" />
@@ -59,6 +61,7 @@
      <Compile Include="Assets\Scripts\CameraControlScript.cs" />
      <Compile Include="Assets\Scripts\CanCounterScript.cs" />
      <Compile Include="Assets\Scripts\ChangeNPCAlpha.cs" />
+     <Compile Include="Assets\Scripts\Controls.cs" />
      <Compile Include="Assets\Scripts\CounteringScript.cs" />
      <Compile Include="Assets\Scripts\FPSMovementScript.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />

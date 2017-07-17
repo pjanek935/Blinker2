@@ -2,15 +2,18 @@
 using System.Collections;
 using System;
 
-public class CounteringScript : MonoBehaviour {
+public class CounteringScript : MonoBehaviour, Controls {
 
     public float counterTime = 0.5f;
+    public bool active = true;
 
     private AnimationManagerScript animManager;
     private ThrowingScript throwingScript;
     private float counterTimer = 0;
     private bool countering = false;
     private bool canCounter = false;
+    
+
 
     // Use this for initialization
     void Start () {
@@ -20,6 +23,9 @@ public class CounteringScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!active)
+            return;
+
         if (countering)
         {
             counterTimer += Time.deltaTime;
@@ -61,5 +67,15 @@ public class CounteringScript : MonoBehaviour {
     public bool IsCountering()
     {
         return countering;
+    }
+
+    public bool IsActive()
+    {
+        return active;
+    }
+
+    public void SetActive(bool active)
+    {
+        this.active = active;
     }
 }

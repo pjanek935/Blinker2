@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class ShootingScript : MonoBehaviour {
+public class ShootingScript : MonoBehaviour, Controls {
 
     public float fireRate = 0.5f;
     public GameObject bullet;
     public Transform spawnPoint;
-    public Camera camera;
+    public new Camera camera;
+    public bool active = true;
 
     private AnimationManagerScript animManager;
     private CounteringScript counteringScript;
@@ -20,6 +22,8 @@ public class ShootingScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!active)
+            return;
 
         RaycastHit hit;
         Vector3 rayDirection = camera.transform.forward;
@@ -48,5 +52,15 @@ public class ShootingScript : MonoBehaviour {
     public float getShootTimer()
     {
         return shootTimer;
+    }
+
+    public bool IsActive()
+    {
+        return active;
+    }
+
+    public void SetActive(bool active)
+    {
+        this.active = active;
     }
 }

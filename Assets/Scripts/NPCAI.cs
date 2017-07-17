@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class NPCAI : MonoBehaviour {
 
     public Transform player;
+    public bool active = true;
 
     private List<Transform> poi;
     private int currentPOI = 0;
@@ -19,24 +20,30 @@ public class NPCAI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        GameObject poiContener = GameObject.Find("POI");
-        int childCount = poiContener.transform.childCount;
-        poi = new List<Transform>();
-        for (int i=0; i<childCount; i++)
-        {
-            poi.Add(poiContener.transform.GetChild(i));
-        }
-
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
-        currentPOI = random.Next(0, poi.Count);
-        agent.speed = 5;
-        animator.SetTrigger("walk");
+        if (active)
+        {
+            GameObject poiContener = GameObject.Find("POI");
+            int childCount = poiContener.transform.childCount;
+            poi = new List<Transform>();
+            for (int i = 0; i < childCount; i++)
+                poi.Add(poiContener.transform.GetChild(i));
+            currentPOI = random.Next(0, poi.Count);
+            agent.speed = 5;
+            animator.SetTrigger("walk");
+        }
+        
     }
 
     // Update is called once per frame
     void Update () {
+
+
+
+        if (!active)
+            return;
 
         if (idle)
         {
@@ -77,10 +84,6 @@ public class NPCAI : MonoBehaviour {
             }
         }
 
-        
-
-        
-
         //agent.destination = player.position;
 
         //float d = Vector3.Distance(player.position, transform.position);
@@ -102,5 +105,21 @@ public class NPCAI : MonoBehaviour {
         //    agent.speed = 0;
         //    animator.SetTrigger("Punch");
         //}
+    }
+
+    public void DisableCollider(float seconds)
+    {
+        GetComponent<CapsuleCollider>().isTrigger = true;
+        IEnumerator coroutine = ActivateCollider(seconds);
+        StartCoroutine(coroutine);
+    }
+
+    private IEnumerator ActivateCollider(float seconds)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(seconds);
+            GetComponent<CapsuleCollider>().isTrigger = false;
+        }
     }
 }

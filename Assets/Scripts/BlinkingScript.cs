@@ -3,13 +3,15 @@ using System.Collections;
 using System;
 using UnityEngine.UI;
 
-public class BlinkingScript : MonoBehaviour {
+public class BlinkingScript : MonoBehaviour, Controls {
 
     public Image blinkSlider;
     public GameObject playerPhantom;
     public float blinkSpeed = 100f;
     public float blinkLength = 20f;
     public float distToObstacleThreshold = 6f;
+    public bool active = true;
+    public float refreshRate = 0.002f;
 
     private AnimationManagerScript animManager;
     private Rigidbody rb;
@@ -42,6 +44,8 @@ public class BlinkingScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!active)
+            return;
 
         if (Input.GetButtonDown("Fire2") && !blinking)
             Blink();
@@ -73,7 +77,7 @@ public class BlinkingScript : MonoBehaviour {
 
         if (blinkSlider.fillAmount < 1)
         {
-            blinkSlider.fillAmount += 0.01f;
+            blinkSlider.fillAmount += refreshRate;
         }
 
     }
@@ -107,9 +111,8 @@ public class BlinkingScript : MonoBehaviour {
             blinkSlider.GetComponentInParent<BlinkImage>().BlinkRed();
             return;
         }
-            
-
         blinkSlider.fillAmount -= 0.33f;
+        //GetComponent<BoxCollider>().isTrigger = true;
 
         //Attack animation
         if (verMove >= 0.2 && !throwingScript.IsThrown() && animManager.GetState() != AnimationManagerScript.State.COUNTER)
@@ -147,6 +150,7 @@ public class BlinkingScript : MonoBehaviour {
     public void StopBlinking()
     {
         blinking = false;
+        //GetComponent<BoxCollider>().isTrigger = false;
         rb.useGravity = true;
         if (throwingScript.IsThrown() && throwBlink)
         {
@@ -173,5 +177,15 @@ public class BlinkingScript : MonoBehaviour {
         rb.AddForce(Vector3.up * 500, ForceMode.Impulse);
         GetComponent<FPSMovementScript>().Ground();
         slowMotion.startSlowMotion();
+    }
+
+    public bool IsActive()
+    {
+        return active;
+    }
+
+    public void SetActive(bool active)
+    {
+        this.active = active;
     }
 }

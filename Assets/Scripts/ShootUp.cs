@@ -23,14 +23,21 @@ public class ShootUp : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         if (blinkingScript.IsBlinking() && other.gameObject.tag == "NPC")
+        {
             Shoot();
+            other.gameObject.GetComponent<NPCAI>().DisableCollider(0.1f);
+        }
+            
 
     }
 
     void OnCollisionEnter(Collision other)
     {
         if (blinkingScript.IsBlinking() && other.gameObject.tag == "NPC")
+        {
             Shoot();
+            other.gameObject.GetComponent<NPCAI>().DisableCollider(0.5f);
+        }
     }
 
     private void Shoot()
