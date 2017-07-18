@@ -1,21 +1,14 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+//Only for use in rig animation
 public class CanCounterScript : MonoBehaviour {
 
-    public CounteringScript counteringScript;
-
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public CounteringScript counterigScript;
 
     public void CanCounter()
     {
-        counteringScript.SetCanCounter(true);
+        counterigScript.SetCanCounter(true);
     }
 }

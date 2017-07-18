@@ -6,7 +6,7 @@ public class ShootBulletScript : MonoBehaviour {
     public float speed = 10;
     public int damage = 10;
     private CounteringScript counteringScript;
-    private Transform camera;
+    private new Transform camera;
 
     private Rigidbody rb;
 

@@ -7,17 +7,15 @@ public class CounteringScript : MonoBehaviour, Controls {
     public float counterTime = 0.5f;
     public bool active = true;
 
-    private AnimationManagerScript animManager;
+    private RigAnimationManager animManager;
     private ThrowingScript throwingScript;
     private float counterTimer = 0;
     private bool countering = false;
     private bool canCounter = false;
     
-
-
     // Use this for initialization
     void Start () {
-        animManager = GetComponent<AnimationManagerScript>();
+        animManager = GetComponent<RigAnimationManager>();
         throwingScript = GetComponent<ThrowingScript>();
 	}
 	
@@ -34,7 +32,7 @@ public class CounteringScript : MonoBehaviour, Controls {
         }
 
         if (Input.GetKeyDown(KeyCode.E) && !countering && !throwingScript.IsThrown() &&
-            animManager.GetState() != AnimationManagerScript.State.THROW)
+            animManager.GetState() != RigAnimationManager.State.THROW)
             StartCountering();
         
     }

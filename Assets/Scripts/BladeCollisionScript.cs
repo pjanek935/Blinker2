@@ -9,39 +9,12 @@ public class BladeCollisionScript : MonoBehaviour {
     private bool collided = false;
     private bool stuck = false;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void FixedUpdate()
-    {
-        if (collided)
-        {
-            collided = false;
-            stuck = true;
-            float magnitude = rb.velocity.magnitude;
-            //Debug.Log("Blade contact, " + magnitude + ", x: " + rb.velocity.x + ", y: " + rb.velocity.y + ", z: " + rb.velocity.z);
-            if (magnitude >= 6)
-            {
-                rb.velocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
-                rb.isKinematic = true;
-            }
-        }
-    }
-
     public bool IsStuck()
     {
         return stuck;
     }
 
-    public void resetStuck()
+    public void ResetStuck()
     {
         stuck = false;
     }
@@ -50,7 +23,14 @@ public class BladeCollisionScript : MonoBehaviour {
     {
         if ( other.tag == "Wall" && throwKatanaScript.GetCanStuck())
         {
-            collided = true;
+            stuck = true;
+            float magnitude = rb.velocity.magnitude;
+            if (magnitude >= 6)
+            {
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true;
+            }
         }
     }
 }

@@ -47,7 +47,7 @@ public class ThrowThisScript : MonoBehaviour {
             rb.AddTorque(transform.forward * torqueForward);
             rb.AddTorque(transform.right * torqueRight);
             rb.AddTorque(transform.up * torqueUp);
-            bladeCollider.resetStuck();
+            bladeCollider.ResetStuck();
         }
     }
 

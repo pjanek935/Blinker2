@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class BlinkingScript : MonoBehaviour, Controls {
 
-    public Image blinkSlider;
-    public GameObject playerPhantom;
+    public Image blinkSlider; //GUI element representing blink bar
+    public GameObject playerPhantom; //Object left after blinking, for dodge-slowmo use
     public float blinkSpeed = 100f;
     public float blinkLength = 20f;
-    public float distToObstacleThreshold = 6f;
+    public float distToObstacleThreshold = 6f; //When distance to obstacle is smaller blinkig is canceled
     public bool active = true;
-    public float refreshRate = 0.002f;
+    public float blinkRefreshRate = 0.002f;
 
-    private AnimationManagerScript animManager;
+    private RigAnimationManager animManager;
     private Rigidbody rb;
     private GameObject blinkDestination;
     private ShootingScript shootingScript;
@@ -22,18 +22,12 @@ public class BlinkingScript : MonoBehaviour, Controls {
 
     private float currentBlinkgSpeed;
     private bool blinking = false;
-    private bool startBlink = false;
-    private Vector3 blinkDirection;
-    private Vector3 playerVelocity = new Vector3(0, 0, 0);
-    private bool attacking = false;
-    private int currentAttack = 0;
-    private float attackTimer = 0;
     private bool throwBlink = false;
 
     // Use this for initialization
     void Start () {
         currentBlinkgSpeed = blinkSpeed;
-        animManager = GetComponent<AnimationManagerScript>();
+        animManager = GetComponent<RigAnimationManager>();
         shootingScript = GetComponent<ShootingScript>();
         throwingScript = GetComponent<ThrowingScript>();
         slowMotion = GetComponent<SlowMotion>();
@@ -50,35 +44,14 @@ public class BlinkingScript : MonoBehaviour, Controls {
         if (Input.GetButtonDown("Fire2") && !blinking)
             Blink();
 
+        //Move towards blink direction
         if (blinking)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, blinkDestination.transform.position, currentBlinkgSpeed * Time.deltaTime);
-            playerVelocity = playerVelocity - transform.position;
-            if (playerVelocity == Vector3.zero)
-            {
-                blinking = false;
-                //animManager.Normal();
-            }
-            playerVelocity = transform.position;
-        }
+            transform.position = Vector3.MoveTowards(transform.position,
+                blinkDestination.transform.position, currentBlinkgSpeed * Time.deltaTime);
 
-        Vector3 rayDirection = blinkDestination.transform.position - transform.position;
-        float rayLength = Vector3.Distance(transform.position, blinkDestination.transform.position);
-        Debug.DrawRay(transform.position, rayDirection * rayLength);
-
-        attackTimer += Time.deltaTime;
-        if (attackTimer >= 1f)
-        {
-            attackTimer = 0;
-            currentAttack++;
-            if (currentAttack >= 3)
-                currentAttack = 0;
-        }
-
+        //Refill blink slider
         if (blinkSlider.fillAmount < 1)
-        {
-            blinkSlider.fillAmount += refreshRate;
-        }
+            blinkSlider.fillAmount += blinkRefreshRate;
 
     }
 
@@ -112,22 +85,21 @@ public class BlinkingScript : MonoBehaviour, Controls {
             return;
         }
         blinkSlider.fillAmount -= 0.33f;
-        //GetComponent<BoxCollider>().isTrigger = true;
 
         //Attack animation
-        if (verMove >= 0.2 && !throwingScript.IsThrown() && animManager.GetState() != AnimationManagerScript.State.COUNTER)
+        if (verMove >= 0.2 && !throwingScript.IsThrown() && animManager.GetState() != RigAnimationManager.State.COUNTER)
             animManager.Attack();
 
         blinking = true;
         rb.useGravity = false;
-        playerVelocity = transform.position; //??
-        blinkDirection = transform.rotation * (new Vector3(horMove, 0, verMove).normalized);
+        Vector3 blinkDirection = transform.rotation * (new Vector3(horMove, 0, verMove).normalized);
         blinkDestination.transform.position = transform.position + blinkDirection * blinkLength;
 
         playerPhantom.transform.position = transform.position;
 
-        slowMotion.EnableSlowMotion();
+        slowMotion.EnableSlowMotion(); //Slowmotion when dodge succesfull enabled
 
+        //Check if there are obstacles on blink path
         RaycastHit raycastHit;
         Vector3 rayDirection = blinkDestination.transform.position - transform.position;
         float rayLength = Vector3.Distance(transform.position, blinkDestination.transform.position);
@@ -139,9 +111,7 @@ public class BlinkingScript : MonoBehaviour, Controls {
                 blinkDestination.transform.position = raycastHit.point;
                 float distToObstacle = Vector3.Distance(transform.position, blinkDestination.transform.position);
                 if (distToObstacle < distToObstacleThreshold)
-                {
                     StopBlinking();
-                }
             }
         }
     }
@@ -150,7 +120,6 @@ public class BlinkingScript : MonoBehaviour, Controls {
     public void StopBlinking()
     {
         blinking = false;
-        //GetComponent<BoxCollider>().isTrigger = false;
         rb.useGravity = true;
         if (throwingScript.IsThrown() && throwBlink)
         {
@@ -169,14 +138,6 @@ public class BlinkingScript : MonoBehaviour, Controls {
     {
         if ( (other.gameObject.tag == "Wall") && blinking)
             StopBlinking();
-    }
-
-    private void ShootUp()
-    {
-        rb.velocity = Vector3.zero;
-        rb.AddForce(Vector3.up * 500, ForceMode.Impulse);
-        GetComponent<FPSMovementScript>().Ground();
-        slowMotion.startSlowMotion();
     }
 
     public bool IsActive()

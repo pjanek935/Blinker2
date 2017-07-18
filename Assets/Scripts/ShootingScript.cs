@@ -10,13 +10,13 @@ public class ShootingScript : MonoBehaviour, Controls {
     public new Camera camera;
     public bool active = true;
 
-    private AnimationManagerScript animManager;
+    private RigAnimationManager animManager;
     private CounteringScript counteringScript;
     private float shootTimer = 0;
 
     // Use this for initialization
     void Start () {
-        animManager = GetComponent<AnimationManagerScript>();
+        animManager = GetComponent<RigAnimationManager>();
         counteringScript = GetComponent<CounteringScript>();
 	}
 	
@@ -25,6 +25,7 @@ public class ShootingScript : MonoBehaviour, Controls {
         if (!active)
             return;
 
+        //Change bulletSpawn rotation to shoot bullets where gunsight aims
         RaycastHit hit;
         Vector3 rayDirection = camera.transform.forward;
         Ray ray = new Ray(camera.transform.position + rayDirection * 5, rayDirection);

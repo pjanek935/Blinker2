@@ -2,36 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Changes NPC's alpha when close to player
 public class ChangeNPCAlpha : MonoBehaviour {
 
     public Transform player;
-
-    
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
-        float playerD = Vector3.Distance(player.position, transform.position);
-
-        if (playerD < 10)
-        {
-            float alpha = 0;
-            Renderer renderer = GetComponent<Renderer>();
-            Color color = renderer.material.color;
-            color.a = alpha;
-            renderer.material.color = color;
-        }
-        else if (playerD < 30)
-        {
-            float alpha = (playerD-10) / 20;
-            Renderer renderer = GetComponent<Renderer>();
-            Color color = renderer.material.color;
-            color.a = alpha;
-            renderer.material.color = color;
-        }
+        float distance = Vector3.Distance(player.position, transform.position);
+        float alpha = 0;
+        if (distance < 30 && distance > 10)
+            alpha = (distance - 10) / 20;
+        Renderer renderer = GetComponent<Renderer>();
+        Color color = renderer.material.color;
+        color.a = alpha;
+        renderer.material.color = color;
     }
 }

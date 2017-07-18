@@ -11,7 +11,7 @@ public class ThrowingScript : MonoBehaviour, Controls {
     public MeshRenderer katanaMesh;
     public bool active = true;
 
-    private AnimationManagerScript animManager;
+    private RigAnimationManager animManager;
     private BlinkingScript blinkingScript;
     private FPSMovementScript fpsMovementScript;
 
@@ -44,7 +44,7 @@ public class ThrowingScript : MonoBehaviour, Controls {
 
     // Use this for initialization
     void Start () {
-        animManager = GetComponent<AnimationManagerScript>();
+        animManager = GetComponent<RigAnimationManager>();
         blinkingScript = GetComponent<BlinkingScript>();
         fpsMovementScript = GetComponent<FPSMovementScript>();
 	}
@@ -55,8 +55,8 @@ public class ThrowingScript : MonoBehaviour, Controls {
             return;
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && !katanaScript.getIsThrown() && 
-            animManager.GetState() != AnimationManagerScript.State.ATTACK &&
-            animManager.GetState() != AnimationManagerScript.State.COUNTER)
+            animManager.GetState() != RigAnimationManager.State.ATTACK &&
+            animManager.GetState() != RigAnimationManager.State.COUNTER)
         {
             throwing = true;
             animManager.Throw();

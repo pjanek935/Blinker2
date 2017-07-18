@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//No longer in use
 public class WallClimbScript : MonoBehaviour {
 
     public float climbingSpeed = 30f;

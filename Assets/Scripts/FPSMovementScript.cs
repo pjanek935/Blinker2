@@ -6,7 +6,7 @@ public class FPSMovementScript : MonoBehaviour {
     public float moveSpeed = 25.0f;
     public float jumpPower = 100;
 
-    private AnimationManagerScript animManager;
+    private RigAnimationManager animManager;
     private Rigidbody rb;
     private ShootingScript shootingScript;
     private SlowMotion slowMotion;
@@ -22,7 +22,7 @@ public class FPSMovementScript : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        animManager = GetComponent<AnimationManagerScript>();
+        animManager = GetComponent<RigAnimationManager>();
         shootingScript = GetComponent<ShootingScript>();
         slowMotion = GetComponent<SlowMotion>();
         throwingScript = GetComponent<ThrowingScript>();

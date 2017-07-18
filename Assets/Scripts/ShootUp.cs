@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Shoots player up and starts slowmo when player attacks enemy by sword
 public class ShootUp : MonoBehaviour {
 
     private Rigidbody rb;
@@ -14,11 +15,6 @@ public class ShootUp : MonoBehaviour {
         blinkingScript = transform.parent.gameObject.GetComponent<BlinkingScript>();
         slowMotion = transform.parent.gameObject.GetComponent<SlowMotion>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     void OnTriggerEnter(Collider other)
     {
@@ -27,8 +23,6 @@ public class ShootUp : MonoBehaviour {
             Shoot();
             other.gameObject.GetComponent<NPCAI>().DisableCollider(0.1f);
         }
-            
-
     }
 
     void OnCollisionEnter(Collision other)
