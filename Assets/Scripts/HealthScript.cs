@@ -7,6 +7,7 @@ public class HealthScript : MonoBehaviour {
 
     public int maxHealth = 100;
     public Image healthSlider;
+    public Image bloodOverlay;
 
     private int currentHealth = 100;
 
@@ -20,6 +21,7 @@ public class HealthScript : MonoBehaviour {
         currentHealth -= damage;
         healthSlider.fillAmount = (currentHealth / (float)maxHealth);
         healthSlider.GetComponent<BlinkImage>().BlinkRed();
+        bloodOverlay.GetComponent<BloodOverlayScript>().Blink();
     }
 
     void OnCollisionEnter(Collision collision)
