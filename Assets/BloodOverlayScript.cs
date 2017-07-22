@@ -21,14 +21,15 @@ public class BloodOverlayScript : MonoBehaviour {
         if (state == State.FADE_OUT)
         {
             Color color = GetComponent<Image>().color;
-            color.a -= 0.001f;
+            color.a -= 0.01f;
             GetComponent<Image>().color = color;
+            if (color.a <= 0)
+                state = State.NONE;
         }
 	}
 
     public void Blink()
     {
-        state = State.FADE_IN;
         Color color = GetComponent<Image>().color;
         color.a = 1;
         GetComponent<Image>().color = color;

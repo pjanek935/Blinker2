@@ -39,6 +39,7 @@ public class ShootingScript : MonoBehaviour, Controls {
         {
             Vector3 shootDirection = camera.transform.position + rayDirection * 100000 - spawnPoint.position;
             spawnPoint.rotation = Quaternion.LookRotation(shootDirection);
+
         }
 
         shootTimer += Time.deltaTime;
