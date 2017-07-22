@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1680
     height: 917
-  m_MinSize: {x: 711, y: 492}
-  m_MaxSize: {x: 18006, y: 14042}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 129
+  controlID: 130
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,8 +231,8 @@ MonoBehaviour:
     y: 0
     width: 398
     height: 917
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 17}
@@ -343,29 +343,29 @@ MonoBehaviour:
     width: 200
     height: 896
   m_TreeViewState:
-    scrollPos: {x: 0, y: 2673}
-    m_SelectedIDs: 46d7ffff
-    m_LastClickedID: -10426
-    m_ExpandedIDs: c6e5ffffe6e5ffff76eaffff1afcffff00000000be2b0000dc2d00001a2e0000682e0000ce2e0000ea2e0000163000002e300000a830000056310000e8310000a8320000d2330000da3300004c340000c8370000163a0000e83a0000643b0000163c0000583c0000523d00008a3d0000323e0000243f0000623f0000863f0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 8697fdff
+    m_LastClickedID: -157818
+    m_ExpandedIDs: 92b5faff769dfcff3ebffcff44bffcff9c97fdff56d1fdfffc2effffc442ffff1afcffff00000000442c0000762f0000689d0000389f000042a0000040a6000010a80000c6af000022b2000044b3000088ba00008cc00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: BuildingWallGreen3
+      m_OriginalName: BuildingWallGreen3
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -294390
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
   m_ExpandedScenes:
-  - room
+  - scene02
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -396,14 +396,14 @@ MonoBehaviour:
     width: 1076
     height: 625
   m_SceneLighting: 1
-  lastFramingTime: 2158.3980782916933
+  lastFramingTime: 1960.1107431917665
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -121.9375, y: 63.4375, z: 126.53125}
+    m_Target: {x: -30.65625, y: 45.63672, z: -41.125}
     speed: 2
-    m_Value: {x: -121.9375, y: 63.4375, z: 126.53125}
+    m_Value: {x: -30.65625, y: 45.63672, z: -41.125}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -418,27 +418,27 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 1
+      m_Target: 0
       speed: 2
-      m_Value: 1
+      m_Value: 0
     zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.11051777, y: 0.8893692, z: -0.30462658, w: -0.3226128}
+    m_Target: {x: 0.0028897757, y: 0.9970834, z: -0.04939634, w: 0.058395773}
     speed: 2
-    m_Value: {x: -0.110514015, y: 0.88933897, z: -0.30461624, w: -0.32260182}
+    m_Value: {x: 0.002889727, y: 0.9970667, z: -0.04939551, w: 0.058394793}
   m_Size:
-    m_Target: 484.30365
+    m_Target: 125.77469
     speed: 2
-    m_Value: 484.30365
+    m_Value: 125.77469
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
-  m_LastSceneViewOrtho: 0
+  m_LastSceneViewRotation: {x: 0.04575705, y: 0.76925474, z: 0.05550886, w: -0.63487977}
+  m_LastSceneViewOrtho: 1
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
@@ -535,19 +535,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Objects/Buildings
+    - Assets/Prefabs/Objects/Walls
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Objects/Buildings
+  - Assets/Prefabs/Objects/Walls
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity Projects\Blinker2
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 87}
-    m_SelectedIDs: 9e860000
-    m_LastClickedID: 34462
-    m_ExpandedIDs: 000000007026000072270000e22900000c2a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 71}
+    m_SelectedIDs: 62290000
+    m_LastClickedID: 10594
+    m_ExpandedIDs: 00000000702600007c270000f6290000302a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -575,7 +575,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070260000e2290000
+    m_ExpandedIDs: 00000000702600007c270000f6290000302a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

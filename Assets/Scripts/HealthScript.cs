@@ -6,14 +6,16 @@ using UnityEngine.UI;
 public class HealthScript : MonoBehaviour {
 
     public int maxHealth = 100;
-    public Image healthSlider;
-    public Image bloodOverlay;
+    private Image healthSlider;
+    private Image bloodOverlay;
 
     private int currentHealth = 100;
 
 	// Use this for initialization
 	void Start () {
         currentHealth = maxHealth;
+        healthSlider = GameObject.Find("HealthSlider").GetComponent<Image>();
+        bloodOverlay = GameObject.Find("BloodOverlay").GetComponent<Image>();
 	}
 
     public void DealDamage(int damage)

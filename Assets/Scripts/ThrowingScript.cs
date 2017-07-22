@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class ThrowingScript : MonoBehaviour, Controls {
 
-    public Image blinkSlider;
     public Transform katanaTransform;
     public ThrowThisScript katanaScript;
     public MeshRenderer katanaMesh;
     public bool active = true;
 
+    private Image blinkSlider;
     private RigAnimationManager animManager;
     private BlinkingScript blinkingScript;
     private FPSMovementScript fpsMovementScript;
@@ -47,6 +47,7 @@ public class ThrowingScript : MonoBehaviour, Controls {
         animManager = GetComponent<RigAnimationManager>();
         blinkingScript = GetComponent<BlinkingScript>();
         fpsMovementScript = GetComponent<FPSMovementScript>();
+        blinkSlider = GameObject.Find("BlinkSlider").GetComponent<Image>();
 	}
 	
 	// Update is called once per frame

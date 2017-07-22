@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class BlinkingScript : MonoBehaviour, Controls {
 
-    public Image blinkSlider; //GUI element representing blink bar
     public GameObject playerPhantom; //Object left after blinking, for dodge-slowmo use
     public float blinkSpeed = 100f;
     public float blinkLength = 20f;
@@ -13,6 +12,7 @@ public class BlinkingScript : MonoBehaviour, Controls {
     public bool active = true;
     public float blinkRefreshRate = 0.002f;
 
+    private Image blinkSlider; //GUI element representing blink bar
     private RigAnimationManager animManager;
     private Rigidbody rb;
     private GameObject blinkDestination;
@@ -34,6 +34,7 @@ public class BlinkingScript : MonoBehaviour, Controls {
 
         rb = GetComponent<Rigidbody>();
         blinkDestination = GameObject.Find("BlinkDestination");
+        blinkSlider = GameObject.Find("BlinkSlider").GetComponent<Image>();
     }
 	
 	// Update is called once per frame
