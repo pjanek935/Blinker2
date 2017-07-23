@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1680
     height: 967
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1680
     height: 917
-  m_MinSize: {x: 711, y: 492}
-  m_MaxSize: {x: 18006, y: 14042}
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 11
+  controlID: 47
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,8 +129,8 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 917
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 12
+  controlID: 48
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -344,9 +344,9 @@ MonoBehaviour:
     height: 896
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8805000076ee00001e07000056ee000070ee0000
-    m_LastClickedID: 0
-    m_ExpandedIDs: b408f9ffe68af9ffa091fdff0cabfeff10abfeff00dbfeff04dbfeff76f8ffff04fafffffcfaffffc4fbffff1afcffff00000000542c0000ca2c0000f22c0000
+    m_SelectedIDs: fcf6ffff
+    m_LastClickedID: -2308
+    m_ExpandedIDs: b69afbff1ee4ffff1ae5ffff1afcffff00000000422d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -396,14 +396,14 @@ MonoBehaviour:
     width: 1076
     height: 625
   m_SceneLighting: 1
-  lastFramingTime: 2133.9007518889384
+  lastFramingTime: 1930.9063221066544
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -48.628906, y: 90.69531, z: -15.207031}
+    m_Target: {x: -57.898438, y: 38.796875, z: 40.890625}
     speed: 2
-    m_Value: {x: -48.628906, y: 90.69531, z: -15.207031}
+    m_Value: {x: -57.898438, y: 38.796875, z: 40.890625}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -426,13 +426,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.2954167, y: -0.027241904, z: 0.0083680665, w: 0.95499337}
+    m_Target: {x: 0.09394855, y: -0.7235201, z: 0.100484654, w: 0.6764604}
     speed: 2
-    m_Value: {x: 0.29540262, y: -0.027240606, z: 0.008367668, w: 0.9549478}
+    m_Value: {x: 0.093948394, y: -0.7235189, z: 0.10048448, w: 0.67645925}
   m_Size:
-    m_Target: 43.564404
+    m_Target: 69.09495
     speed: 2
-    m_Value: 43.564404
+    m_Value: 69.09495
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -535,19 +535,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Prefabs/Objects
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs/Objects
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity Projects\Blinker2
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 11}
-    m_SelectedIDs: 70260000
-    m_LastClickedID: 9840
-    m_ExpandedIDs: 00000000702600007e2700000a2a0000442a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 175}
+    m_SelectedIDs: 4a2a0000
+    m_LastClickedID: 10826
+    m_ExpandedIDs: 000000007626000084270000102a00004a2a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -575,7 +575,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000702600007e2700000a2a0000442a0000
+    m_ExpandedIDs: 000000007626000084270000102a00004a2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -627,7 +627,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 11}
+    m_ScrollPosition: {x: 0, y: 347}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 190
 --- !u!114 &16
