@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1680
     height: 917
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 711, y: 492}
+  m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
-  controlID: 130
+  controlID: 11
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,8 +129,8 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 917
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -344,23 +344,23 @@ MonoBehaviour:
     height: 896
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8697fdff
-    m_LastClickedID: -157818
-    m_ExpandedIDs: 92b5faff769dfcff3ebffcff44bffcff9c97fdff56d1fdfffc2effffc442ffff1afcffff00000000442c0000762f0000689d0000389f000042a0000040a6000010a80000c6af000022b2000044b3000088ba00008cc00000
+    m_SelectedIDs: 8805000076ee00001e07000056ee000070ee0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: b408f9ffe68af9ffa091fdff0cabfeff10abfeff00dbfeff04dbfeff76f8ffff04fafffffcfaffffc4fbffff1afcffff00000000542c0000ca2c0000f22c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: BuildingWallGreen3
-      m_OriginalName: BuildingWallGreen3
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -294390
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
@@ -396,14 +396,14 @@ MonoBehaviour:
     width: 1076
     height: 625
   m_SceneLighting: 1
-  lastFramingTime: 1960.1107431917665
+  lastFramingTime: 2133.9007518889384
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -30.65625, y: 45.63672, z: -41.125}
+    m_Target: {x: -48.628906, y: 90.69531, z: -15.207031}
     speed: 2
-    m_Value: {x: -30.65625, y: 45.63672, z: -41.125}
+    m_Value: {x: -48.628906, y: 90.69531, z: -15.207031}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -418,21 +418,21 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
+      m_Target: 1
       speed: 2
-      m_Value: 0
+      m_Value: 1
     zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.0028897757, y: 0.9970834, z: -0.04939634, w: 0.058395773}
+    m_Target: {x: 0.2954167, y: -0.027241904, z: 0.0083680665, w: 0.95499337}
     speed: 2
-    m_Value: {x: 0.002889727, y: 0.9970667, z: -0.04939551, w: 0.058394793}
+    m_Value: {x: 0.29540262, y: -0.027240606, z: 0.008367668, w: 0.9549478}
   m_Size:
-    m_Target: 125.77469
+    m_Target: 43.564404
     speed: 2
-    m_Value: 125.77469
+    m_Value: 43.564404
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -535,19 +535,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Objects/Walls
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Objects/Walls
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity Projects\Blinker2
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 71}
-    m_SelectedIDs: 62290000
-    m_LastClickedID: 10594
-    m_ExpandedIDs: 00000000702600007c270000f6290000302a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 11}
+    m_SelectedIDs: 70260000
+    m_LastClickedID: 9840
+    m_ExpandedIDs: 00000000702600007e2700000a2a0000442a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -575,7 +575,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000702600007c270000f6290000302a0000
+    m_ExpandedIDs: 00000000702600007e2700000a2a0000442a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -627,7 +627,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 11}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 190
 --- !u!114 &16

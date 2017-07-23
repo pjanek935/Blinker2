@@ -78,13 +78,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BloodOverlayScript.cs" />
-    <Compile Include="Assets\LoadNextLevel.cs" />
     <Compile Include="Assets\Scripts\BladeCollisionScript.cs" />
     <Compile Include="Assets\Scripts\BlinkImage.cs" />
     <Compile Include="Assets\Scripts\BlinkingScript.cs" />
     <Compile Include="Assets\Scripts\BlinkLightScript.cs" />
+    <Compile Include="Assets\Scripts\BloodOverlayScript.cs" />
     <Compile Include="Assets\Scripts\CanCounterScript.cs" />
+    <Compile Include="Assets\Scripts\CeilingLampAction.cs" />
     <Compile Include="Assets\Scripts\ChangeNPCAlpha.cs" />
     <Compile Include="Assets\Scripts\Controls.cs" />
     <Compile Include="Assets\Scripts\CounteringScript.cs" />
@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\FollowScript.cs" />
     <Compile Include="Assets\Scripts\FPSMovementScript.cs" />
     <Compile Include="Assets\Scripts\HealthScript.cs" />
+    <Compile Include="Assets\Scripts\LoadNextLevel.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\NPCAI.cs" />
     <Compile Include="Assets\Scripts\ReflectBullets.cs" />
@@ -102,6 +103,8 @@
     <Compile Include="Assets\Scripts\ShootingScript.cs" />
     <Compile Include="Assets\Scripts\ShootUp.cs" />
     <Compile Include="Assets\Scripts\SlowMotion.cs" />
+    <Compile Include="Assets\Scripts\Switch.cs" />
+    <Compile Include="Assets\Scripts\SwitchAction.cs" />
     <Compile Include="Assets\Scripts\TargetScript.cs" />
     <Compile Include="Assets\Scripts\ThrowingScript.cs" />
     <Compile Include="Assets\Scripts\ThrowScript.cs" />
