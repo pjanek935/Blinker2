@@ -14,6 +14,7 @@ public class BloodOverlayScript : MonoBehaviour {
         Color color = GetComponent<Image>().color;
         color.a = 0;
         GetComponent<Image>().color = color;
+        GetComponent<Image>().fillAmount = 1;
 	}
 	
 	// Update is called once per frame

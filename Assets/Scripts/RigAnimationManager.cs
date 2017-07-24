@@ -30,6 +30,8 @@ public class RigAnimationManager : MonoBehaviour {
             anim.SetTrigger("idle");
             idleTimer = 0;
         }
+        if (GetState() == State.IDLE && Input.anyKeyDown)
+            anim.SetTrigger("normal");
     }
 
     //Returns current animation state
