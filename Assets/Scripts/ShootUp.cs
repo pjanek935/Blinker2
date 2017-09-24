@@ -21,7 +21,7 @@ public class ShootUp : MonoBehaviour {
         if (blinkingScript.IsBlinking() && other.gameObject.tag == "NPC")
         {
             Shoot();
-            other.gameObject.GetComponent<NPCAI>().DisableCollider(0.1f);
+            //other.gameObject.GetComponent<NPCAI>().DisableCollider(0.1f);
         }
     }
 
@@ -30,7 +30,7 @@ public class ShootUp : MonoBehaviour {
         if (blinkingScript.IsBlinking() && other.gameObject.tag == "NPC")
         {
             Shoot();
-            other.gameObject.GetComponent<NPCAI>().DisableCollider(0.5f);
+           // other.gameObject.GetComponent<NPCAI>().DisableCollider(0.5f);
         }
     }
 
