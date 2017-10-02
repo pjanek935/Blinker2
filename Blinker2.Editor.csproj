@@ -129,6 +129,7 @@
     <Compile Include="Assets\Editor\RotateMesh.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Japanese Mask\Shaders\StandardSpecular.shader" />
     <None Include="Assets\Shaders\3DTextOneSided.shader.shader" />
     <None Include="Assets\Shaders\ChromaticAberration.shader" />
     <None Include="Assets\Shaders\Reflective\psx-unlit-add.shader" />

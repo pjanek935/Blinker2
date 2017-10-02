@@ -78,6 +78,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EnemyHealthScript.cs" />
+    <Compile Include="Assets\EnemyScipt.cs" />
+    <Compile Include="Assets\MainMenu.cs" />
+    <Compile Include="Assets\MaskHealth.cs" />
+    <Compile Include="Assets\NPCSpawner.cs" />
+    <Compile Include="Assets\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\BladeCollisionScript.cs" />
     <Compile Include="Assets\Scripts\BlinkImage.cs" />
     <Compile Include="Assets\Scripts\BlinkingScript.cs" />
@@ -92,7 +98,9 @@
     <Compile Include="Assets\Scripts\DummyShootingScript.cs" />
     <Compile Include="Assets\Scripts\FollowScript.cs" />
     <Compile Include="Assets\Scripts\FPSMovementScript.cs" />
+    <Compile Include="Assets\Scripts\GlobalConst.cs" />
     <Compile Include="Assets\Scripts\HealthScript.cs" />
+    <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\LoadNextLevel.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\NPCAI.cs" />
@@ -118,6 +126,7 @@
     <Compile Include="Assets\Shaders\imageEffects\cPrecision.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Japanese Mask\Shaders\StandardSpecular.shader" />
     <None Include="Assets\Shaders\3DTextOneSided.shader.shader" />
     <None Include="Assets\Shaders\ChromaticAberration.shader" />
     <None Include="Assets\Shaders\Reflective\psx-unlit-add.shader" />

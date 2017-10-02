@@ -5,6 +5,8 @@ using UnityEngine;
 //Shoots player up and starts slowmo when player attacks enemy by sword
 public class ShootUp : MonoBehaviour {
 
+    public int BlinkDamage = 50;
+
     private Rigidbody rb;
     private BlinkingScript blinkingScript;
     private SlowMotion slowMotion;
@@ -20,8 +22,8 @@ public class ShootUp : MonoBehaviour {
     {
         if (blinkingScript.IsBlinking() && other.gameObject.tag == "NPC")
         {
-            Shoot();
-            //other.gameObject.GetComponent<NPCAI>().DisableCollider(0.1f);
+            shoot();
+            dealDamage (other.gameObject);
         }
     }
 
@@ -29,12 +31,12 @@ public class ShootUp : MonoBehaviour {
     {
         if (blinkingScript.IsBlinking() && other.gameObject.tag == "NPC")
         {
-            Shoot();
-           // other.gameObject.GetComponent<NPCAI>().DisableCollider(0.5f);
+            shoot ();
+            dealDamage (other.gameObject);
         }
     }
 
-    private void Shoot()
+    private void shoot()
     {
         rb.velocity = Vector3.zero;
         rb.AddForce(Vector3.up * 350, ForceMode.Impulse);
@@ -42,4 +44,15 @@ public class ShootUp : MonoBehaviour {
         blinkingScript.StopBlinking();
         slowMotion.startSlowMotion();
     }
+
+    private void dealDamage (GameObject other)
+    {
+        HealthScript otherHealth = other.GetComponent<HealthScript>();
+
+        if (otherHealth != null)
+        {
+            otherHealth.DealDamage(BlinkDamage);
+        }
+    }
+
 }
