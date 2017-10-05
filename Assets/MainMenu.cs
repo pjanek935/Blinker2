@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
+    [SerializeField] CanvasGroup canvasGroup;
+
     [SerializeField] Button exitButton;
     [SerializeField] Button optionsButton;
     [SerializeField] Button tutorialButton;
@@ -51,7 +53,7 @@ public class MainMenu : MonoBehaviour {
 
     void onTutorialButtonClicked()
     {
-
+        SceneLoader.Instance.LoadTutorial (canvasGroup);
     }
 
     void onNewGameButtonClicked ()

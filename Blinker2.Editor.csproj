@@ -124,12 +124,17 @@
       <Project>{3F8111C0-FAF4-F3A2-AF34-A14D3CC5CEE6}</Project>
       <Name>Blinker2</Name>
     </ProjectReference>
+    <ProjectReference Include="Blinker2.Plugins.csproj">
+      <Project>{AE34B5C3-5EC3-A317-798B-1BFD15A8E11F}</Project>
+      <Name>Blinker2.Plugins</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\RotateMesh.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Japanese Mask\Shaders\StandardSpecular.shader" />
+    <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Shaders\3DTextOneSided.shader.shader" />
     <None Include="Assets\Shaders\ChromaticAberration.shader" />
     <None Include="Assets\Shaders\Reflective\psx-unlit-add.shader" />
